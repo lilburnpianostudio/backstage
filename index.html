@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Backstage · Thomas Music Studio</title>
+  <meta name="theme-color" content="#2A7F7B">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Backstage">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #2A7F7B;
+      --marigold: #F4A93C;
+      --clay: #C75D4A;
+      --ivory: #FBF6EC;
+      --charcoal: #2B2A28;
+      --soft-teal: #DCEBE9;
+      --sand: #F2E4CA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', -apple-system, 'Segoe UI', sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      min-height: 100vh;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    header {
+      background: var(--teal);
+      color: var(--ivory);
+      padding: calc(14px + env(safe-area-inset-top)) 20px 14px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    header h1 { font-size: 1.35rem; font-weight: 700; letter-spacing: 0.02em; }
+    header .sub { font-size: 0.78rem; opacity: 0.85; }
+    main { max-width: 560px; margin: 0 auto; padding: 18px 16px 40px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--sand);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(43, 42, 40, 0.06);
+    }
+    #status {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      background: var(--soft-teal);
+      color: var(--teal);
+    }
+    #status[data-kind="warn"] { background: var(--sand); color: #8a6413; }
+    #status[data-kind="sending"] { background: var(--soft-teal); color: var(--teal); }
+    textarea {
+      width: 100%;
+      min-height: 160px;
+      font: inherit;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      border: 1.5px solid var(--soft-teal);
+      border-radius: 12px;
+      padding: 14px;
+      background: var(--ivory);
+      color: var(--charcoal);
+      resize: vertical;
+    }
+    textarea:focus { outline: 2px solid var(--teal); border-color: var(--teal); }
+    .row { display: flex; gap: 10px; margin-top: 14px; }
+    button {
+      font: inherit;
+      font-weight: 500;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 18px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #save {
+      flex: 1;
+      background: var(--teal);
+      color: var(--ivory);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    #save:active { filter: brightness(0.92); }
+    #mic {
+      background: var(--sand);
+      color: var(--charcoal);
+    }
+    #mic.live { background: var(--clay); color: var(--ivory); }
+    .ghost {
+      background: transparent;
+      color: var(--teal);
+      border: 1.5px solid var(--soft-teal);
+      padding: 10px 14px;
+      font-size: 0.9rem;
+    }
+    #queueCard h2, .util h2 { font-size: 0.95rem; margin-bottom: 10px; }
+    #queueBadge {
+      display: inline-block;
+      background: var(--marigold);
+      color: var(--charcoal);
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 1px 9px;
+      font-size: 0.85rem;
+      margin-left: 6px;
+    }
+    #queueList { list-style: none; font-size: 0.82rem; color: #6b6a67; }
+    #queueList li { padding: 3px 0; overflow-wrap: anywhere; }
+    .util .rowline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 0.9rem;
+    }
+    #signalResult { font-size: 0.85rem; color: #6b6a67; }
+    #signalResult[data-kind="ok"] { color: var(--teal); font-weight: 700; }
+    #signalResult[data-kind="bad"] { color: var(--clay); font-weight: 700; }
+    #who { color: #6b6a67; font-size: 0.85rem; overflow-wrap: anywhere; }
+    #signedOut { text-align: center; padding: 40px 18px; }
+    #signedOut p { margin-bottom: 22px; line-height: 1.55; }
+    #signInBtn { background: var(--teal); color: var(--ivory); font-size: 1.05rem; font-weight: 700; padding: 14px 28px; }
+    #toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(28px + env(safe-area-inset-bottom));
+      transform: translateX(-50%) translateY(20px);
+      background: var(--charcoal);
+      color: var(--ivory);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    footer { text-align: center; font-size: 0.75rem; color: #a09d97; padding: 8px 0 26px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Backstage</h1>
+    <span class="sub">Thomas Music Studio</span>
+  </header>
+
+  <main>
+    <div id="signedOut" class="card" style="display:none">
+      <p>Backstage is the studio's back office in your pocket: capture a thought and it lands in Team-Inbox for Larry, even if you're offline when it strikes.</p>
+      <button id="signInBtn">Sign in with Microsoft</button>
+      <p id="previewNote" style="display:none; margin-top:16px; font-size:0.85rem; color:#8a6413; background:var(--sand); border-radius:10px; padding:10px 14px;">
+        You're viewing the local copy. To use Backstage for real, publish it and register the URL in Azure: see <strong>DEPLOY.md</strong> in this folder (steps 1-4), then sign in at <strong>lilburnpianostudio.github.io/backstage</strong>.
+      </p>
+    </div>
+
+    <div id="signedIn" style="display:none">
+      <span id="status" data-kind="ok">Ready</span>
+
+      <div class="card">
+        <textarea id="text" placeholder="Brain dump. Raw is fine — Larry sorts it out later."></textarea>
+        <div class="row">
+          <button id="mic" type="button">🎙 Dictate</button>
+          <button id="save" type="button">Send to Team-Inbox</button>
+        </div>
+      </div>
+
+      <div class="card" id="queueCard" style="display:none">
+        <h2>Waiting to send<span id="queueBadge">0</span></h2>
+        <ul id="queueList"></ul>
+        <div class="row"><button id="retryBtn" class="ghost" type="button">Retry now</button></div>
+      </div>
+
+      <div class="card util">
+        <div class="rowline">
+          <button id="testBtn" class="ghost" type="button">Test signal</button>
+          <span id="signalResult"></span>
+        </div>
+        <div class="rowline">
+          <span id="who"></span>
+          <button id="signOutBtn" class="ghost" type="button">Sign out</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast"></div>
+  </main>
+
+  <footer>Backstage · internal tool · Thomas Music Studio</footer>
+
+  <script src="vendor/msal-browser.min.js"></script>
+  <script src="msal-auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

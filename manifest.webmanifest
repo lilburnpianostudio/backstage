@@ -1,0 +1,13 @@
+{
+  "name": "Backstage — Thomas Music Studio",
+  "short_name": "Backstage",
+  "description": "Thomas Music Studio's internal capture and admin app.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FBF6EC",
+  "theme_color": "#2A7F7B",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
