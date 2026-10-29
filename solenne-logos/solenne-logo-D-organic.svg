@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 718" role="img" aria-labelledby="title desc">
+  <title id="title">Solenne Naturals logo, concept D: organic</title>
+  <desc id="desc">Flowing lotus with stem and leaves above the Solenne Naturals wordmark and tagline.</desc>
+  <rect id="background" width="600" height="718" fill="#F5F0E8"/>
+  <g id="mark" stroke-linejoin="round" stroke-linecap="round">
+  <g id="stem-and-leaves">
+    <path id="stem" d="M300,266 C292,304 312,332 302,364 C297,382 304,396 300,414" fill="none" stroke="#5B7553" stroke-width="5"/>
+    <path id="leaf-large" d="M302,366 C322,322 384,296 452,292 C440,350 380,388 302,366Z" fill="#5B7553"/>
+    <path id="leaf-large-rib" d="M308,362 C352,338 400,316 440,298" fill="none" stroke="#F5F0E8" stroke-width="2"/>
+    <path id="leaf-small" d="M299,334 C282,306 244,292 206,294 C214,330 256,352 299,334Z" fill="#5B7553" fill-opacity="0.85"/>
+    <path id="leaf-small-rib" d="M294,331 C260,315 232,303 214,298" fill="none" stroke="#F5F0E8" stroke-width="2"/>
+  </g>
+  <g id="bloom" stroke="#F5F0E8" stroke-width="3" paint-order="stroke">
+    <path d="M300,262 C299.9,217.1 352.8,199.7 417.3,217.2 C388,260.6 339.5,285.7 300,262Z" fill="#B8A9C9"/>
+    <path d="M300,262 C260.5,285.7 212,260.6 182.7,217.2 C247.2,199.7 300.1,217.1 300,262Z" fill="#B8A9C9"/>
+    <path d="M300,262 C278,213.5 326.4,158.6 403.6,133.3 C394.2,201 354.3,261.1 300,262Z" fill="#E8C4B8"/>
+    <path d="M300,262 C245.7,261.1 205.8,201 196.4,133.3 C273.6,158.6 322,213.5 300,262Z" fill="#E8C4B8"/>
+    <path d="M300,262 C249.6,226 255.2,138 300,62 C344.8,138 350.4,226 300,262Z" fill="#E8C4B8"/>
+  </g>
+  <g id="accents" fill="none" stroke="#C5A55A" stroke-width="2.5">
+    <path d="M300,252 C296,226 304,206 300,182"/>
+    <path d="M232,434 C268,446 332,446 368,434"/>
+  </g>
+  </g>
+  <g id="wordmark">
+    <text id="name" x="300" y="548" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="92" letter-spacing="2" fill="#5B7553">Solenne</text>
+    <text id="descriptor" x="308" y="600" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="24" letter-spacing="16" fill="#5B7553">NATURALS</text>
+  </g>
+  <g id="tagline">
+    <path id="tagline-rule" d="M272,632 L328,632" stroke="#C5A55A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <text id="tagline-text" x="300" y="668" text-anchor="middle" font-family="Georgia, Palatino, serif" font-style="italic" font-size="21" letter-spacing="0.5" fill="#5B7553">Elegance Rooted in Nature.</text>
+  </g>
+</svg>

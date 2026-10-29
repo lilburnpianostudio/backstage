@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" role="img" aria-labelledby="title desc">
+  <title id="title">Solenne Naturals logo, concept A: minimal</title>
+  <desc id="desc">Single-weight line-art lotus above the Solenne Naturals wordmark and tagline.</desc>
+  <rect id="background" width="600" height="620" fill="#F5F0E8"/>
+  <g id="mark" fill="#F5F0E8" stroke="#5B7553" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <g id="petals">
+    <path d="M300,282 C311.5,245 360.4,237.3 408.7,254.9 C374.3,293.1 327.6,309.3 300,282Z"/>
+    <path d="M300,282 C272.4,309.3 225.7,293.1 191.3,254.9 C239.6,237.3 288.5,245 300,282Z"/>
+    <path d="M300,282 C293.2,232.5 346.6,194.8 413.4,186.9 C393.9,251.2 347.6,297.3 300,282Z"/>
+    <path d="M300,282 C252.4,297.3 206.1,251.2 186.6,186.9 C253.4,194.8 306.8,232.5 300,282Z"/>
+    <path d="M300,282 C269,231 309.1,160.4 377.8,115.2 C387.4,196.9 359,273 300,282Z"/>
+    <path d="M300,282 C241,273 212.6,196.9 222.2,115.2 C290.9,160.4 331,231 300,282Z"/>
+    <path d="M300,282 C246.6,243.5 253.6,149.3 300,68 C346.4,149.3 353.4,243.5 300,282Z"/>
+  </g>
+  <g id="water" fill="none">
+    <path d="M178,306 C230,330 370,330 422,306" stroke="#C5A55A"/>
+    <path d="M236,326 C270,340 330,340 364,326" stroke="#C5A55A"/>
+  </g>
+  </g>
+  <g id="wordmark">
+    <text id="name" x="300" y="450" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="92" letter-spacing="2" fill="#5B7553">Solenne</text>
+    <text id="descriptor" x="308" y="502" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="24" letter-spacing="16" fill="#5B7553">NATURALS</text>
+  </g>
+  <g id="tagline">
+    <path id="tagline-rule" d="M272,534 L328,534" stroke="#C5A55A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <text id="tagline-text" x="300" y="570" text-anchor="middle" font-family="Georgia, Palatino, serif" font-style="italic" font-size="21" letter-spacing="0.5" fill="#5B7553">Elegance Rooted in Nature.</text>
+  </g>
+</svg>
