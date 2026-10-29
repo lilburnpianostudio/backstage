@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" role="img" aria-labelledby="title desc">
+  <title id="title">Solenne Naturals logo, concept B: botanical</title>
+  <desc id="desc">Layered, filled lotus in botanical illustration style above the Solenne Naturals wordmark and tagline.</desc>
+  <rect id="background" width="600" height="620" fill="#F5F0E8"/>
+  <g id="mark" stroke-linejoin="round" stroke-linecap="round">
+  <g id="sepals" fill="#5B7553" fill-opacity="0.9" stroke="#F5F0E8" stroke-width="2">
+    <path d="M300,292 C327.8,272.7 380.4,287.3 420.3,322 C368.8,333.9 315.5,322.1 300,292Z"/>
+    <path d="M300,292 C284.5,322.1 231.2,333.9 179.7,322 C219.6,287.3 272.2,272.7 300,292Z"/>
+    <path d="M300,292 C325,285.7 354.8,310.5 369.3,346.2 C331.2,340.7 299.9,317.8 300,292Z"/>
+    <path d="M300,292 C300.1,317.8 268.8,340.7 230.7,346.2 C245.2,310.5 275,285.7 300,292Z"/>
+  </g>
+  <g id="petals-back" fill="#B8A9C9" stroke="#5B7553" stroke-width="1.6">
+    <path d="M300,292 C304.7,241.6 362.5,222.1 426.1,235.9 C393.8,292.3 340.7,322.2 300,292Z"/>
+    <path d="M300,292 C259.3,322.2 206.2,292.3 173.9,235.9 C237.5,222.1 295.3,241.6 300,292Z"/>
+  </g>
+  <g id="petals-mid" fill="#E8C4B8" stroke="#5B7553" stroke-width="1.6">
+    <path d="M300,292 C284.2,237.2 338.6,184.2 412.8,162.2 C401.4,238.8 356.4,300 300,292Z"/>
+    <path d="M300,292 C243.6,300 198.6,238.8 187.2,162.2 C261.4,184.2 315.8,237.2 300,292Z"/>
+  </g>
+  <g id="petals-inner" fill="#E8C4B8" stroke="#5B7553" stroke-width="1.6">
+    <path d="M300,292 C262.9,243.4 294.6,162 357.9,102.7 C377.2,187.2 357.9,272.4 300,292Z"/>
+    <path d="M300,292 C242.1,272.4 222.8,187.2 242.1,102.7 C305.4,162 337.1,243.4 300,292Z"/>
+  </g>
+  <g id="petal-center" fill="#E8C4B8" stroke="#5B7553" stroke-width="1.6">
+    <path d="M300,292 C246.6,252.8 253.6,156.8 300,74 C346.4,156.8 353.4,252.8 300,292Z"/>
+  </g>
+  <g id="veins" fill="none" stroke="#C5A55A" stroke-width="1.4" stroke-opacity="0.9">
+    <path d="M317.6,284.1 C344.5,276.7 361.4,260.2 385.7,253.8"/>
+    <path d="M282.4,284.1 C258.8,269.1 235.3,267.7 214.3,253.8"/>
+    <path d="M315.8,273.8 C342.3,251.2 352.5,223.7 376.7,203.7"/>
+    <path d="M284.2,273.8 C265.5,244.5 239.7,230.5 223.3,203.7"/>
+    <path d="M308.1,265.5 C325.4,229.4 323.3,195.6 339.4,163.2"/>
+    <path d="M291.9,265.5 C286,225.9 265.4,199.1 260.6,163.2"/>
+    <path d="M300,261.5 C306.5,217.9 293.5,183 300,143.8"/>
+  </g>
+  <g id="water" fill="none" stroke="#C5A55A" stroke-width="2.5">
+    <path d="M170,330 C225,356 375,356 430,330"/>
+    <path d="M232,350 C268,364 332,364 368,350"/>
+  </g>
+  </g>
+  <g id="wordmark">
+    <text id="name" x="300" y="450" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="92" letter-spacing="2" fill="#5B7553">Solenne</text>
+    <text id="descriptor" x="308" y="502" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="24" letter-spacing="16" fill="#5B7553">NATURALS</text>
+  </g>
+  <g id="tagline">
+    <path id="tagline-rule" d="M272,534 L328,534" stroke="#C5A55A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <text id="tagline-text" x="300" y="570" text-anchor="middle" font-family="Georgia, Palatino, serif" font-style="italic" font-size="21" letter-spacing="0.5" fill="#5B7553">Elegance Rooted in Nature.</text>
+  </g>
+</svg>
